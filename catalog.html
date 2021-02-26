@@ -12,36 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
   </head>
-  <body class="page-body">
+  <body class="catalog">
 
     <header class="main-header">
       <div class="main-header-bar">
         <div class="container">
           <div class="header-inner">
-            <a class="main-header-logo"><img src="img/logo-technomart.svg " width="108" height="18" alt="Логотоп Technomart"></a>
+            <a class="main-header-logo" href="index.html"><img src="img/logo-technomart.svg " width="108" height="18" alt="Логотоп Technomart"></a>
             <form class="form-search" action="/" method="get">
-              <label for="search">
-                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
+              <label for="search"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="1">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
-                </g></svg>
-              </label>
+                </g>
+                </svg></label>
               <input type="search" id="search" placeholder="Поиск:">
             </form>
-            <div class="order-menu">
-              <a class="order-item" href="#">
-                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
-                <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
-                </g></svg>Закладки: 0</a>
-              <a class="order-item" href="#"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
-                <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
-                <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
-                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
-                </g>
-                </svg>Корзина: 0</a>
-              <a class="order-item" href="#">Оформить заказ</a>
+            <div class="user-menu">
+              <a class="user-menu-item bookmark" href="#">Закладки: 0</a>
+              <a class="user-menu-item cart" href="#">Корзина: 0</a>
+              <a class="user-menu-item order" href="#">Оформить заказ</a>
             </div>
           </div>
         </div>
@@ -52,14 +41,17 @@
 
           <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <p class="description">
-            Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта
+            Интернет-магазин строительных материалов<br> и инструментов для ремонта
           </p>
           <div class="header-contacts">
             <p class="phone">+7 (812) 555-05-55</p>
             <p class="adress">г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</p>
           </div>
           <div class="authorization">
-            <a class="login" href="#">Войти</a>
+            <a class="login" href="#"><svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+              <path d="M16.177 15.01H11.3894V17H16.177C18.2513 17 19.038 15.19 19.0618 13.974V3.028C19.038 1.811 18.2513 0 16.177 0H11.3894V1.99H16.177C16.9761 1.99 17.1218 2.671 17.1389 3.047V13.951C17.1227 14.327 16.9761 15.01 16.177 15.01Z" fill="#C5C5C5"/>
+              </svg>Войти</a>
             <a class="registration" href="#">Регистрация</a>
           </div>
 
@@ -100,12 +92,34 @@
         <section class="filter">
   			  <h2 class="filter-title">Фильтр:</h2>
   			  <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-	  			  <fieldset>
+
+
+            <fieldset class="filter-item">
               <legend>Цена:</legend>
-              <img src="img/Group 10.svg" width="220" height="80">
-            		<input type="text" value="0">&#8211;
-            		<input type="text" value="30000">
-	  			  </fieldset>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <span>&mdash;</span>
+                    <label class="max-price">
+                    <input type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+
+              </div>
+          </fieldset>
+
+
+
             <fieldset>
               <legend>Производители:</legend>
               <ul class="filter-manufacturers-list">
