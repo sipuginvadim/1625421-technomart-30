@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/icons/180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
@@ -31,8 +31,18 @@
                 height="18"
                 alt="Логотоп Technomart"
             /></a>
-            <form class="form-search" action="/" method="get">
-              <label for="search"
+            <form
+              class="form-search"
+              action="https://echo.htmlacademy.ru"
+              method="get"
+            >
+              <input
+                class="search-input"
+                type="search"
+                id="search"
+                placeholder="Поиск:"
+              />
+              <label for="search" class="search-label"
                 ><svg
                   width="17"
                   height="17"
@@ -46,7 +56,6 @@
                   />
                 </svg>
               </label>
-              <input type="search" id="search" placeholder="Поиск:" />
             </form>
             <div class="user-menu">
               <a class="user-menu-item bookmark" href="#">Закладки: 0</a>
@@ -141,27 +150,12 @@
                 <li class="slider-item slide-current">
                   <h3 class="slide-title">Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
-                  <p></p>
                 </li>
                 <li class="slider-item">
                   <h3 class="slide-title">Дрели</h3>
                   <p>Соседям на радость</p>
-                  <p></p>
                 </li>
               </ul>
-              <div class="slider-controls">
-                <button
-                  type="button"
-                  class="slide-marker slide-marker-1 current"
-                  aria-label="Первый слайд"
-                ></button>
-                <button
-                  type="button"
-                  class="slide-marker slide-marker-2"
-                  aria-label="Второй слайд"
-                ></button>
-              </div>
-
               <button
                 type="button"
                 class="slide-toggle toggle-back"
@@ -172,6 +166,18 @@
                 class="slide-toggle toggle-ahead"
                 aria-label="Вперед"
               ></button>
+              <div class="slider-controls">
+                <button
+                  type="button"
+                  class="slide-marker current"
+                  aria-label="Первый слайд"
+                ></button>
+                <button
+                  type="button"
+                  class="slide-marker"
+                  aria-label="Второй слайд"
+                ></button>
+              </div>
 
               <a class="button" href="catalog.html">Открыть каталог</a>
             </li>
@@ -194,7 +200,7 @@
             <a href="#" class="button">Все популярные товары</a>
           </div>
           <ul class="popular-list">
-            <li class="popular-item">
+            <li class="popular-item" tabindex="0">
               <p class="popular-item-image">
                 <img
                   src="img/bosch_bfg_9000.png"
@@ -213,7 +219,7 @@
               <span class="old-price">32500 Р.</span>
               <span class="price">25500 P.</span>
             </li>
-            <li class="popular-item new">
+            <li class="popular-item new" tabindex="0">
               <p class="popular-item-image">
                 <img
                   src="img/bosch_bfg_3000.png"
@@ -232,7 +238,7 @@
                 </button>
               </div>
             </li>
-            <li class="popular-item">
+            <li class="popular-item" tabindex="0">
               <p class="popular-item-image">
                 <img
                   src="img/bosch_bfg_6000.png"
@@ -251,7 +257,7 @@
                 </button>
               </div>
             </li>
-            <li class="popular-item new">
+            <li class="popular-item new" tabindex="0">
               <p class="popular-item-image">
                 <img
                   src="img/bosch_bfg_2000.png"
@@ -421,13 +427,14 @@
             <div class="contacts">
               <h2>Контакты</h2>
               <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-              <a class="mini-map" href=""
-                ><img
+              <button class="mini-map">
+                <img
                   src="img/mini-map.png"
                   width="300"
                   height="158"
                   alt="Миникарта"
-              /></a>
+                />
+              </button>
               <a class="write-us button" href="">Заблудились? Напишите нам!</a>
             </div>
           </div>
@@ -511,8 +518,8 @@
                 <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </p>
               <p class="feedback-site">
-                Разработано -<a href="https://htmlacademy.ru/intensive/htmlcss"
-                  >htmlacademy</a
+                Разработано &mdash; <a href="https://htmlacademy.ru/intensive/htmlcss"
+                  >htmlacademy.ru</a
                 >
               </p>
             </div>
@@ -523,6 +530,7 @@
 
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
 
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="appointment">
@@ -554,27 +562,21 @@
           </p>
         </div>
 
-        <div class="buttons">
+        <div class="modal-buttons">
           <button class="button" type="submit">Отправить</button>
-          <button
-            class="modal-close"
-            type="button"
-            aria-label="Закрыть"
-          ></button>
         </div>
       </form>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615377200461!5m2!1sru!2sru"
         title="Офис компании по адресу г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8"
         width="940"
         height="449"
-        allowfullscreen
       ></iframe>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
   </body>
 </html>
