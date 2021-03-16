@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/icons/180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
@@ -366,9 +366,9 @@
 
             <div class="services-slider">
               <ul class="services-controls">
-                <li class="controls-item selected">Доставка</li>
-                <li class="controls-item">Гарантия</li>
-                <li class="controls-item">Кредит</li>
+                <li class="controls-item selected" tabindex="0">Доставка</li>
+                <li class="controls-item" tabindex="0">Гарантия</li>
+                <li class="controls-item" tabindex="0">Кредит</li>
               </ul>
 
               <ul class="services-list">
@@ -427,7 +427,7 @@
             <div class="contacts">
               <h2>Контакты</h2>
               <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-              <button class="mini-map">
+              <button type="button" class="mini-map">
                 <img
                   src="img/mini-map.png"
                   width="300"
@@ -435,7 +435,7 @@
                   alt="Миникарта"
                 />
               </button>
-              <a class="write-us button" href="">Заблудились? Напишите нам!</a>
+              <button type="button" class="write-us button">Заблудились? Напишите нам!</button>
             </div>
           </div>
         </div>
@@ -447,7 +447,7 @@
         <div class="container">
           <div class="top-footer-container">
             <div class="footer-menu">
-              <a class="main-footer-logo"
+              <a href="#" class="main-footer-logo"
                 ><img
                   src="img/logo-technomart.svg "
                   width="138"
@@ -518,7 +518,8 @@
                 <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </p>
               <p class="feedback-site">
-                Разработано &mdash; <a href="https://htmlacademy.ru/intensive/htmlcss"
+                Разработано &mdash;
+                <a href="https://htmlacademy.ru/intensive/htmlcss"
                   >htmlacademy.ru</a
                 >
               </p>
@@ -532,14 +533,14 @@
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
 
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="appointment">
           <p>
             <label for="appointment-name">Ваше имя:</label>
             <input
               type="text"
               id="appointment-name"
-              name="name"
+              name="user-name"
               placeholder="Имя Фамилия"
             />
           </p>
@@ -548,7 +549,7 @@
             <input
               type="email"
               id="appointment-email"
-              name="e-mail"
+              name="user-email"
               placeholder="email@example.com"
             />
           </p>
@@ -562,7 +563,7 @@
           </p>
         </div>
 
-        <div class="modal-buttons">
+        <div class="feedback-buttons">
           <button class="button" type="submit">Отправить</button>
         </div>
       </form>
@@ -575,8 +576,13 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615377200461!5m2!1sru!2sru"
         title="Офис компании по адресу г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8"
         width="940"
-        height="449"
+        height="442"
+        allowfullscreen
       ></iframe>
     </section>
+
+    <script src="js/writeus.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/bookmark.js"></script>
   </body>
 </html>
