@@ -1687,7 +1687,7 @@ img {
   border-top: none;
   border-left: none;
   transform: rotate(-45deg);
-  top: 3px;
+  top: 5px;
   right: 0px;
 }
 
@@ -1730,7 +1730,7 @@ img {
   padding: 10px;
   padding-left: 18px;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .filter-item {
@@ -1881,7 +1881,7 @@ img {
   line-height: 19px;
   text-transform: uppercase;
   display: block;
-  margin-top: 21px;
+  margin-top: 20px;
   padding-left: 35px;
   position: relative;
   cursor: pointer;
@@ -1892,8 +1892,7 @@ img {
 }
 
 .filter-input:focus + label {
-  border-bottom: 3px solid var(--hover-radio-grey);
-  box-sizing: border-box;
+  outline: 5px solid var(--hover-radio-grey);
 }
 
 .powersupply-list label:hover::before,
