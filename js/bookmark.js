@@ -1,20 +1,22 @@
-const buttonBookmark = document.querySelector(".button-bookmark");
-const popupOrder = document.querySelector(".modal-order");
-const orderClose = popupOrder.querySelector(".modal-close");
+const buttons = document.querySelectorAll(".button-bookmark");
+const popUp = document.querySelector(".modal-order");
+const closeButton = popUp.querySelector(".modal-close");
 
-buttonBookmark.addEventListener("click", function (evt) {
-  popupOrder.classList.add("modal-show");
-});
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", () => {
+    popUp.classList.add("modal-show");
+  });
+}
 
-orderClose.addEventListener("click", function (evt) {
-  popupOrder.classList.remove("modal-show");
+closeButton.addEventListener("click", function (evt) {
+  popUp.classList.remove("modal-show");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (popupOrder.classList.contains("modal-show")) {
+    if (popUp.classList.contains("modal-show")) {
       evt.preventDefault();
-      popupOrder.classList.remove("modal-show");
+      popUp.classList.remove("modal-show");
     }
   }
 });

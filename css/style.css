@@ -1572,9 +1572,6 @@ img {
 
 .modal-feedback {
   display: none;
-  bottom: 100px;
-  top: auto;
-  margin: 0 auto;
   width: 620px;
   box-sizing: border-box;
   box-shadow: 0px 20px 40px var(--shadow-modal-feedback);
