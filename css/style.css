@@ -943,8 +943,10 @@ img {
   transition: 0.5s;
 }
 
-.item-buttons button {
+.item-buttons a {
+  display: block;
   padding: 10px 0;
+  text-align: center;
   color: var(--basic-white);
   border-radius: 2px;
   text-transform: uppercase;
